@@ -23,7 +23,7 @@ describe("counter-program", () => {
     .rpc();
     
     let counter_current_value = await program.account.counter.fetch(counter.publicKey);
-    console.log("COUNTER VALUE IS AFTER CREATING THE ACCOUNT IS: ", counter_current_value.count.toNumber());
+    console.log("THE VALUE OF COUNTER AFTER CREATING THE ACCOUNT IS ", counter_current_value.count.toNumber());
     //console.log("Your transaction signature", tx);
   });
 
@@ -38,7 +38,7 @@ describe("counter-program", () => {
     .rpc();
     
     let counter_current_value = await program.account.counter.fetch(counter.publicKey);
-    console.log("COUNTER VALUE IS AFTER INCREMENTING THE ACCOUNT IS: ", counter_current_value.count.toNumber());
+    console.log("THE VALUE OF COUNTER AFTER CALLING THE INCREMENT FUNCTION IS ", counter_current_value.count.toNumber());
     //console.log("Your transaction signature", tx);
   });
 
@@ -53,7 +53,7 @@ describe("counter-program", () => {
     .rpc();
     
     let counter_current_value = await program.account.counter.fetch(counter.publicKey);
-    console.log("COUNTER VALUE IS AFTER DECREMENTING THE ACCOUNT IS: ", counter_current_value.count.toNumber());
+    console.log("THE VALUE OF COUNTER AFTER CALLING THE DECREMENT FUNCTION IS ", counter_current_value.count.toNumber());
     //console.log("Your transaction signature", tx);
   });
 
